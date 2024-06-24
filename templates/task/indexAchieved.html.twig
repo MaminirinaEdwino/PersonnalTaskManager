@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Achieved Task List
+{% endblock %}
+
+{% block body %}
+<h1>Achieved Task index</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>State</th>
+				<th>StartDate</th>
+				<th>EndDate</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for task in tasks %}
+				<tr>
+					<td>{{ task.id }}</td>
+					<td>{{ task.title }}</td>
+					<td>{{ task.description }}</td>
+					<td>{{ task.state ? 'Finished' : 'not finished' }}</td>
+					<td>{{ task.startDate ? task.startDate|date('Y-m-d') : '' }}</td>
+					<td>{{ task.endDate ? task.endDate|date('Y-m-d') : '' }}</td>
+				</tr>
+			{% else %}
+				<tr class="no_records">
+					<td colspan="8">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+<a href="{{ path('app_task_index') }}" class="back_btn">
+	<</a>
+<a href="{{ path('app_task_index_all') }}" class="achieved">
+
+	All
+</a>
+
+{% endblock %}

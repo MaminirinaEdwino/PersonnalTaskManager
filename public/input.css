@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    @apply bg-blue-950
+}
+
+h1{
+    @apply text-4xl font-semibold text-center m-6 text-white
+}
+.table{
+    @apply w-full
+}
+.no_records{
+    @apply text-center p-5
+}
+.new, .btn ,.achieved{
+    @apply p-2 pl-4 pr-4 rounded-lg bg-blue-500 flex w-fit text-white font-semibold hover:bg-blue-400 duration-300 
+}
+.achieved{
+    @apply absolute right-0 top-0
+}
+.new{@apply absolute top-0 rounded-[50%]}
+form{
+    @apply w-fit m-auto  p-2 rounded-xl bg-gradient-to-br from-blue-600 via-purple-300 to-blue-600 overflow-hidden
+}
+
+#task label{
+    @apply w-full block text-white
+}
+.btn{
+    @apply w-full text-center flex justify-center
+}
+#task{
+    @apply flex flex-col w-96
+}
+#task input[type="text"]{
+    @apply shadow-lg drop-shadow-lg h-10 w-full rounded-lg mb-5 p-2
+}
+#task input[type="date"] {
+    @apply shadow-lg drop-shadow-lg h-10 w-full rounded-lg mb-5 p-2
+}
+#task textarea{
+    @apply shadow-lg drop-shadow-lg h-20 w-full resize-none rounded-lg p-2
+}
+.back_btn{
+    @apply rounded-[50%] absolute top-0 flex h-10 w-10  bg-blue-500 items-center justify-center font-semibold text-white hover:bg-blue-400 duration-300 ease-in
+}
+.del_btn{
+    @apply bg-red-500 hover:bg-red-400
+}
+th{
+    @apply text-center bg-blue-500  h-10
+}
+td{
+    @apply  text-center bg-white min-h-20
+}
